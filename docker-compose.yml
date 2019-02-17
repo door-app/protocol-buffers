@@ -1,9 +1,16 @@
 version: '3.3'
 services:
-  grpc:
+  grpc-go:
     build: ./docker/grpc-go
     volumes:
       - ./proto/:/proto
       - ./docker/grpc-go:/grpc-go
       - ./out/go:/out/go
+    tty: true
+  grpc-php:
+    build: ./docker/grpc-php
+    volumes:
+      - ./proto/:/proto
+      - ./docker/grpc-php:/grpc-php
+      - ./out/php:/out/php
     tty: true
