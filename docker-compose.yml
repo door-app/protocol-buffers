@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  grpc:
+    build: ./docker/grpc-go
+    volumes:
+      - ./proto/:/proto
+      - ./docker/grpc-go:/grpc-go
+      - ./out/go:/out/go
+    tty: true
