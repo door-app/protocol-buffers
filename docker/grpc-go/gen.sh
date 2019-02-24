@@ -1,1 +1,0 @@
-protoc -I /proto/sample /proto/sample/helloworld.proto --go_out=plugins=grpc:/out/go
